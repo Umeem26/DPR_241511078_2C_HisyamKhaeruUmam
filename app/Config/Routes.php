@@ -12,3 +12,6 @@ $routes->get('/logout', 'AuthController::logout');
 
 $routes->get('/dashboard', 'DashboardController::index', ['filter' => 'auth']);
 $routes->get('/anggota', 'AnggotaController::index', ['filter' => 'auth']);
+
+$routes->get('/anggota/tambah', 'AnggotaController::tambah', ['filter' => 'auth']);
+$routes->post('/anggota/simpan', 'AnggotaController::simpan', ['filter' => 'auth']);
