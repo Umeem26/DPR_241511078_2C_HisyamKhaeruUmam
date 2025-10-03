@@ -1,5 +1,5 @@
 <h2 class="mb-4">Data Komponen Gaji & Tunjangan</h2>
-<a href="#" class="btn btn-primary mb-3">+ Tambah Komponen Gaji</a>
+<a href="<?= base_url('/komponen-gaji/tambah') ?>" class="btn btn-primary mb-3">+ Tambah Komponen Gaji</a>
 <hr>
 <div class="table-responsive">
     <table class="table table-striped table-hover">

@@ -22,3 +22,6 @@ $routes->post('/anggota/update/(:num)', 'AnggotaController::update/$1', ['filter
 $routes->get('/anggota/hapus/(:num)', 'AnggotaController::hapus/$1', ['filter' => 'auth']);
 
 $routes->get('/komponen-gaji', 'KomponenGajiController::index', ['filter' => 'auth']);
+
+$routes->get('/komponen-gaji/tambah', 'KomponenGajiController::tambah', ['filter' => 'auth']);
+$routes->post('/komponen-gaji/simpan', 'KomponenGajiController::simpan', ['filter' => 'auth']);
