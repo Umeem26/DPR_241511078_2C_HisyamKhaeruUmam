@@ -32,7 +32,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('/anggota') ?>">Data Anggota</a>
                     </li>
-                </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('/komponen-gaji') ?>">Komponen Gaji</a>
+                    </li>
+                    </ul>
                 <ul class="navbar-nav">
                      <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a>

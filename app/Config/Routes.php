@@ -20,3 +20,5 @@ $routes->get('/anggota/edit/(:num)', 'AnggotaController::edit/$1', ['filter' => 
 $routes->post('/anggota/update/(:num)', 'AnggotaController::update/$1', ['filter' => 'auth']);
 
 $routes->get('/anggota/hapus/(:num)', 'AnggotaController::hapus/$1', ['filter' => 'auth']);
+
+$routes->get('/komponen-gaji', 'KomponenGajiController::index', ['filter' => 'auth']);
