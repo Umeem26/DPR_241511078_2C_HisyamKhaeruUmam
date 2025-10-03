@@ -15,3 +15,6 @@ $routes->get('/anggota', 'AnggotaController::index', ['filter' => 'auth']);
 
 $routes->get('/anggota/tambah', 'AnggotaController::tambah', ['filter' => 'auth']);
 $routes->post('/anggota/simpan', 'AnggotaController::simpan', ['filter' => 'auth']);
+
+$routes->get('/anggota/edit/(:num)', 'AnggotaController::edit/$1', ['filter' => 'auth']);
+$routes->post('/anggota/update/(:num)', 'AnggotaController::update/$1', ['filter' => 'auth']);

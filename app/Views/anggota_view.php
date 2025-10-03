@@ -20,7 +20,7 @@
                 <td><?= esc($row['status_pernikahan']) ?></td>
                 <td><?= esc($row['jumlah_anak']) ?></td>
                 <td>
-                    <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="<?= base_url('/anggota/edit/' . $row['id_anggota']) ?>" class="btn btn-sm btn-warning">Edit</a>
                     <a href="#" class="btn btn-sm btn-danger">Hapus</a>
                 </td>
             </tr>
