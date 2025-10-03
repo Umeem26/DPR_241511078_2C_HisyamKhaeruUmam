@@ -102,4 +102,18 @@ class AnggotaController extends BaseController
 
         return redirect()->to('/anggota');
     }
+
+    // Menghapus data anggota
+    public function hapus($id)
+    {
+        // Proteksi halaman
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+        
+        $anggotaModel = new AnggotaModel();
+        $anggotaModel->delete($id);
+
+        return redirect()->to('/anggota');
+    }
 }

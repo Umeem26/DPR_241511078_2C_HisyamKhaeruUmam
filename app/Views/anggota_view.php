@@ -21,7 +21,7 @@
                 <td><?= esc($row['jumlah_anak']) ?></td>
                 <td>
                     <a href="<?= base_url('/anggota/edit/' . $row['id_anggota']) ?>" class="btn btn-sm btn-warning">Edit</a>
-                    <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+                    <a href="<?= base_url('/anggota/hapus/' . $row['id_anggota']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
             </tr>
             <?php endforeach; ?>
