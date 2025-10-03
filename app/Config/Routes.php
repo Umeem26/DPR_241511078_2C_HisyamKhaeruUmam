@@ -25,3 +25,5 @@ $routes->get('/komponen-gaji', 'KomponenGajiController::index', ['filter' => 'au
 
 $routes->get('/komponen-gaji/tambah', 'KomponenGajiController::tambah', ['filter' => 'auth']);
 $routes->post('/komponen-gaji/simpan', 'KomponenGajiController::simpan', ['filter' => 'auth']);
+
+$routes->get('/penggajian/tambah', 'PenggajianController::tambah', ['filter' => 'auth']);
