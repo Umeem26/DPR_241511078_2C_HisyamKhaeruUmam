@@ -8,9 +8,7 @@ use App\Models\PenggajianModel;
 
 class PenggajianController extends BaseController
 {
-    /**
-     * Menampilkan daftar semua data penggajian.
-     */
+    //Menampilkan daftar penggajian
     public function index()
     {
         if (session()->get('role') !== 'Admin') {
@@ -31,9 +29,7 @@ class PenggajianController extends BaseController
         return view('template', ['content' => view('penggajian_view', $data)]);
     }
 
-    /**
-     * Menampilkan form untuk menambah data penggajian.
-     */
+    //Menambah data penggajian baru
     public function tambah()
     {
         if (session()->get('role') !== 'Admin') {
@@ -52,9 +48,7 @@ class PenggajianController extends BaseController
         return view('template', ['content' => view('penggajian_tambah_view', $data)]);
     }
 
-    /**
-     * Menyimpan data penggajian baru.
-     */
+    //Menyimpan data penggajian baru
     public function simpan()
     {
         if (session()->get('role') !== 'Admin') {
@@ -67,6 +61,19 @@ class PenggajianController extends BaseController
             'id_anggota'       => $this->request->getPost('id_anggota'),
             'id_komponen_gaji' => $this->request->getPost('id_komponen_gaji')
         ]);
+
+        return redirect()->to('/penggajian');
+    }
+
+    // Menghapus data penggajian
+    public function hapus($id)
+    {
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+        
+        $penggajianModel = new PenggajianModel();
+        $penggajianModel->delete($id);
 
         return redirect()->to('/penggajian');
     }

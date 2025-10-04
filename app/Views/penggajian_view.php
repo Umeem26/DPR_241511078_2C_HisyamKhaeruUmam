@@ -16,7 +16,7 @@
                 <td><?= esc($row['nama_depan'] . ' ' . $row['nama_belakang']) ?></td>
                 <td><?= esc($row['nama_komponen']) ?></td>
                 <td>
-                    <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+                    <a href="<?= base_url('/penggajian/hapus/' . $row['id_penggajian']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
             </tr>
             <?php endforeach; ?>

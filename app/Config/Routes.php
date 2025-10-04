@@ -15,7 +15,6 @@ $routes->get('/anggota', 'AnggotaController::index', ['filter' => 'auth']);
 
 $routes->get('/anggota/tambah', 'AnggotaController::tambah', ['filter' => 'auth']);
 $routes->post('/anggota/simpan', 'AnggotaController::simpan', ['filter' => 'auth']);
-
 $routes->get('/anggota/edit/(:num)', 'AnggotaController::edit/$1', ['filter' => 'auth']);
 $routes->post('/anggota/update/(:num)', 'AnggotaController::update/$1', ['filter' => 'auth']);
 $routes->get('/anggota/hapus/(:num)', 'AnggotaController::hapus/$1', ['filter' => 'auth']);
@@ -27,3 +26,4 @@ $routes->post('/komponen-gaji/simpan', 'KomponenGajiController::simpan', ['filte
 $routes->get('/penggajian', 'PenggajianController::index', ['filter' => 'auth']);
 $routes->get('/penggajian/tambah', 'PenggajianController::tambah', ['filter' => 'auth']);
 $routes->post('/penggajian/simpan', 'PenggajianController::simpan', ['filter' => 'auth']);
+$routes->get('/penggajian/hapus/(:num)', 'PenggajianController::hapus/$1', ['filter' => 'auth']);
