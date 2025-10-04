@@ -30,3 +30,4 @@ $routes->get('/penggajian/hapus-semua/(:num)', 'PenggajianController::hapusSemua
 $routes->get('/penggajian/detail/(:num)', 'PenggajianController::detail/$1', ['filter' => 'auth']);
 
 $routes->get('/public/anggota', 'PublicController::anggota');
+$routes->get('/public/penggajian', 'PublicController::penggajian');

@@ -44,8 +44,12 @@
                         </ul>
                     <?php elseif($role === 'Public'): ?>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="<?= base_url('/public/anggota') ?>">Data Anggota</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Data Penggajian</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('/public/anggota') ?>">Data Anggota</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('/public/penggajian') ?>">Data Penggajian</a>
+                            </li>
                         </ul>
                     <?php endif; ?>
 
