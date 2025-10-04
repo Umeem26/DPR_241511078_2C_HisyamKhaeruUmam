@@ -36,7 +36,7 @@
                         <a class="nav-link" href="<?= base_url('/komponen-gaji') ?>">Komponen Gaji</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/penggajian/tambah') ?>">Penggajian</a>
+                        <a class="nav-link" href="<?= base_url('/penggajian') ?>">Penggajian</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
