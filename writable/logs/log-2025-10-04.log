@@ -221,3 +221,198 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\ETS\\DPR_241511078_2C_HisyamKhaeruUmam\\public\\index.php')
+DEBUG - 2025-10-04 16:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 16:15:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gaji_dpr_db', 3306, '', 0)
+#1 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\app\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+#7 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(933): App\Controllers\AuthController->process()
+#8 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\rewrite.php(44): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\app\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+#6 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(933): App\Controllers\AuthController->process()
+#7 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\rewrite.php(44): require_once('C:\\Users\\Lenovo...')
+#13 {main}
+CRITICAL - 2025-10-04 16:15:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: auth/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengguna`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->process()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\ETS\\DPR_241511078_2C_HisyamKhaeruUmam\\public\\index.php')
+DEBUG - 2025-10-04 16:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 16:16:47 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gaji_dpr_db', 3306, '', 0)
+#1 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\app\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+#7 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(933): App\Controllers\AuthController->process()
+#8 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\rewrite.php(44): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\app\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+#6 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(933): App\Controllers\AuthController->process()
+#7 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\rewrite.php(44): require_once('C:\\Users\\Lenovo...')
+#13 {main}
+CRITICAL - 2025-10-04 16:16:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: auth/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengguna`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->process()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\ETS\\DPR_241511078_2C_HisyamKhaeruUmam\\public\\index.php')
+DEBUG - 2025-10-04 16:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 16:17:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gaji_dpr_db', 3306, '', 0)
+#1 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\app\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+#7 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(933): App\Controllers\AuthController->process()
+#8 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\rewrite.php(44): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\app\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+#6 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(933): App\Controllers\AuthController->process()
+#7 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lenovo\OneDrive - Politeknik Negeri Bandung\Personal Document\JTK\Semester-3\Proyek-3\Proyek-3\ETS\DPR_241511078_2C_HisyamKhaeruUmam\system\rewrite.php(44): require_once('C:\\Users\\Lenovo...')
+#13 {main}
+CRITICAL - 2025-10-04 16:17:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: auth/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengguna`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(25): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->process()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lenovo\\OneDrive - Politeknik Negeri Bandung\\Personal Document\\JTK\\Semester-3\\Proyek-3\\Proyek-3\\ETS\\DPR_241511078_2C_HisyamKhaeruUmam\\public\\index.php')
+DEBUG - 2025-10-04 16:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 16:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

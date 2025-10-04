@@ -57,4 +57,41 @@ class KomponenGajiController extends BaseController
 
         return redirect()->to('/komponen-gaji');
     }
+
+    // Menampilkan form untuk mengedit data
+    public function edit($id)
+    {
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+
+        $komponenGajiModel = new KomponenGajiModel();
+        
+        $data = [
+            'title'   => 'Ubah Komponen Gaji',
+            'komponen' => $komponenGajiModel->find($id)
+        ];
+
+        return view('template', ['content' => view('komponen_gaji_edit_view', $data)]);
+    }
+
+    // Memperbarui data di database
+    public function update($id)
+    {
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+
+        $komponenGajiModel = new KomponenGajiModel();
+
+        $komponenGajiModel->update($id, [
+            'nama_komponen' => $this->request->getPost('nama_komponen'),
+            'kategori'      => $this->request->getPost('kategori'),
+            'jabatan'       => $this->request->getPost('jabatan'),
+            'nominal'       => $this->request->getPost('nominal'),
+            'satuan'        => $this->request->getPost('satuan')
+        ]);
+
+        return redirect()->to('/komponen-gaji');
+    }
 }
