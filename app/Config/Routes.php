@@ -28,3 +28,5 @@ $routes->get('/penggajian/tambah', 'PenggajianController::tambah', ['filter' => 
 $routes->post('/penggajian/simpan', 'PenggajianController::simpan', ['filter' => 'auth']);
 $routes->get('/penggajian/hapus-semua/(:num)', 'PenggajianController::hapusSemua/$1', ['filter' => 'auth']);
 $routes->get('/penggajian/detail/(:num)', 'PenggajianController::detail/$1', ['filter' => 'auth']);
+
+$routes->get('/public/anggota', 'PublicController::anggota');

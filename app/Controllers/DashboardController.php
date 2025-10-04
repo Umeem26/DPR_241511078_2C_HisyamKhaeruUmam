@@ -6,12 +6,16 @@ class DashboardController extends BaseController
 {
     public function index()
     {
-        // Data yang akan dikirim ke view
+        // Proteksi halaman, hanya admin yang boleh akses
+        if (session()->get('role') !== 'Admin') {
+            // Jika bukan admin, tendang keluar
+            return redirect()->to('/');
+        }
+
         $data = [
             'title' => 'Dashboard'
         ];
 
-        // Memuat view dashboard di dalam template utama yang akan kita buat
         return view('template', ['content' => view('dashboard_view', $data)]);
     }
 }

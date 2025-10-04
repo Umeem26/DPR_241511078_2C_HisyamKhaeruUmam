@@ -34,8 +34,13 @@ class AuthController extends BaseController
             ];
             $session->set($sessionData);
             
-            // Arahkan ke halaman dashboard (akan kita buat nanti)
-            return redirect()->to('/dashboard');
+            // Arahkan pengguna berdasarkan rolenya
+            if ($session->get('role') == 'Admin') {
+                return redirect()->to('/dashboard');
+            } else {
+                // Pengguna 'Public' diarahkan ke halaman data anggota publik
+                return redirect()->to('/public/anggota');
+            }
         } else {
             $session->setFlashdata('msg', 'Username atau Password salah.');
             return redirect()->to('/login');

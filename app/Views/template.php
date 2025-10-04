@@ -20,30 +20,49 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Sistem Gaji DPR</a>
+            <a class="navbar-brand" href="#">
+                <?php if(session()->get('role') === 'Admin'): ?>
+                    Sistem Gaji DPR
+                <?php else: ?>
+                    Transparansi Gaji DPR
+                <?php endif; ?>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/dashboard') ?>">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/anggota') ?>">Data Anggota</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/komponen-gaji') ?>">Komponen Gaji</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/penggajian') ?>">Penggajian</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a>
-                    </li>
-                </ul>
+
+                <?php if(session()->get('isLoggedIn')): ?>
+                    <?php $role = session()->get('role'); ?>
+
+                    <?php if($role === 'Admin'): ?>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('/dashboard') ?>">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('/anggota') ?>">Data Anggota</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('/komponen-gaji') ?>">Komponen Gaji</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('/penggajian') ?>">Penggajian</a></li>
+                        </ul>
+                    <?php elseif($role === 'Public'): ?>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('/public/anggota') ?>">Data Anggota</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Data Penggajian</a></li>
+                        </ul>
+                    <?php endif; ?>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a></li>
+                    </ul>
+
+                <?php else: ?>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('/public/anggota') ?>">Data Anggota</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Data Penggajian</a></li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('/login') ?>">Login Admin</a></li>
+                    </ul>
+                <?php endif; ?>
+
             </div>
         </div>
     </nav>
