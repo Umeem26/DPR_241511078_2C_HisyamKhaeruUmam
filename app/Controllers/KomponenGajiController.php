@@ -94,4 +94,17 @@ class KomponenGajiController extends BaseController
 
         return redirect()->to('/komponen-gaji');
     }
+
+    // Menghapus data
+    public function hapus($id)
+    {
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+        
+        $komponenGajiModel = new KomponenGajiModel();
+        $komponenGajiModel->delete($id);
+
+        return redirect()->to('/komponen-gaji');
+    }
 }

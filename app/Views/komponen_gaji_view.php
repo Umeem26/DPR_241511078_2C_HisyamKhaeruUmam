@@ -23,7 +23,7 @@
                 <td><?= esc($row['satuan']) ?></td>
                 <td>
                     <a href="<?= base_url('/komponen-gaji/edit/' . $row['id_komponen_gaji']) ?>" class="btn btn-sm btn-warning">Edit</a>
-                    <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+                    <a href="<?= base_url('/komponen-gaji/hapus/' . $row['id_komponen_gaji']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
             </tr>
             <?php endforeach; ?>
