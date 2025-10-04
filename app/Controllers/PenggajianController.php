@@ -168,4 +168,62 @@ class PenggajianController extends BaseController
 
         return view('template', ['content' => view('penggajian_detail_view', $data)]);
     }
+
+    // Menampilkan form untuk mengedit penggajian seorang anggota
+    public function edit($id_anggota)
+    {
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+
+        $anggotaModel = new AnggotaModel();
+        $komponenModel = new KomponenGajiModel();
+        $penggajianModel = new PenggajianModel();
+
+        $anggota = $anggotaModel->find($id_anggota);
+        
+        // Ambil semua komponen yang sesuai dengan jabatan anggota
+        $komponenTersedia = $komponenModel->where('jabatan', $anggota['jabatan'])
+                                        ->orWhere('jabatan', 'Semua')
+                                        ->findAll();
+        
+        // Ambil ID dari komponen yang sudah dimiliki anggota ini
+        $komponenDimilikiRaw = $penggajianModel->where('id_anggota', $id_anggota)->findAll();
+        $komponenDimilikiIds = array_column($komponenDimilikiRaw, 'id_komponen_gaji');
+
+        $data = [
+            'title'             => 'Ubah Data Penggajian',
+            'anggota'           => $anggota,
+            'komponen_tersedia' => $komponenTersedia,
+            'komponen_dimiliki' => $komponenDimilikiIds
+        ];
+
+        return view('template', ['content' => view('penggajian_edit_view', $data)]);
+    }
+
+    // Memperbarui data penggajian di database
+    public function update($id_anggota)
+    {
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/dashboard');
+        }
+
+        $penggajianModel = new PenggajianModel();
+        $komponenDipilih = $this->request->getPost('komponen');
+
+        // Hapus dulu semua data penggajian lama untuk anggota ini
+        $penggajianModel->where('id_anggota', $id_anggota)->delete();
+
+        // Simpan kembali data yang baru dipilih
+        if (!empty($komponenDipilih)) {
+            foreach ($komponenDipilih as $id_komponen) {
+                $penggajianModel->save([
+                    'id_anggota'       => $id_anggota,
+                    'id_komponen_gaji' => $id_komponen
+                ]);
+            }
+        }
+
+        return redirect()->to('/penggajian');
+    }
 }

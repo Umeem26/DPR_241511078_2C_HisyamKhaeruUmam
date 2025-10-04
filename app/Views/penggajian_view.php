@@ -19,6 +19,7 @@
                 <td>Rp <?= number_format($row['take_home_pay'], 2, ',', '.') ?></td>
                 <td>
                     <a href="<?= base_url('/penggajian/detail/' . $row['anggota']['id_anggota']) ?>" class="btn btn-sm btn-info">Detail</a>
+                    <a href="<?= base_url('/penggajian/edit/' . $row['anggota']['id_anggota']) ?>" class="btn btn-sm btn-warning">Ubah</a>
                     <a href="<?= base_url('/penggajian/hapus-semua/' . $row['anggota']['id_anggota']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus SEMUA data penggajian untuk anggota ini?')">Hapus</a>
                 </td>
             </tr>

@@ -29,6 +29,8 @@ $routes->get('/komponen-gaji/hapus/(:num)', 'KomponenGajiController::hapus/$1', 
 $routes->get('/penggajian', 'PenggajianController::index', ['filter' => 'auth']);
 $routes->get('/penggajian/tambah', 'PenggajianController::tambah', ['filter' => 'auth']);
 $routes->post('/penggajian/simpan', 'PenggajianController::simpan', ['filter' => 'auth']);
+$routes->get('/penggajian/edit/(:num)', 'PenggajianController::edit/$1', ['filter' => 'auth']);
+$routes->post('/penggajian/update/(:num)', 'PenggajianController::update/$1', ['filter' => 'auth']);
 $routes->get('/penggajian/hapus-semua/(:num)', 'PenggajianController::hapusSemua/$1', ['filter' => 'auth']);
 $routes->get('/penggajian/detail/(:num)', 'PenggajianController::detail/$1', ['filter' => 'auth']);
 
