@@ -26,4 +26,5 @@ $routes->post('/komponen-gaji/simpan', 'KomponenGajiController::simpan', ['filte
 $routes->get('/penggajian', 'PenggajianController::index', ['filter' => 'auth']);
 $routes->get('/penggajian/tambah', 'PenggajianController::tambah', ['filter' => 'auth']);
 $routes->post('/penggajian/simpan', 'PenggajianController::simpan', ['filter' => 'auth']);
-$routes->get('/penggajian/hapus/(:num)', 'PenggajianController::hapus/$1', ['filter' => 'auth']);
+$routes->get('/penggajian/hapus-semua/(:num)', 'PenggajianController::hapusSemua/$1', ['filter' => 'auth']);
+$routes->get('/penggajian/detail/(:num)', 'PenggajianController::detail/$1', ['filter' => 'auth']);
